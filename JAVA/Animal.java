@@ -1,42 +1,36 @@
-package com_1;
+package com_2;
 
-public class Animal {
+public abstract class Animal {
+	abstract void makeSound();
 
-	public void display(){
+	public void eat() {
+		System.out.println("I can eat.");
 
-		System.out.println("I am an animal");
+	}
 
-		}
+	}
 
-		}
+	class Dog extends Animal {
 
-		class Dog extends Animal {
+	// provide implementation of abstract method
 
-		// overriding method
+	public void makeSound() {
 
-		@Override
+	System.out.println("Bark bark");
 
-		public void display(){
-
-		System.out.println("I am a dog");
-
-		}
-
-		public void printMessage(){
-
-		display();
-
-		}
-
-		}
-
-		class Main2 {
+	}
+	}
+	class Main1 {
 
 		public static void main(String[] args) {
 
-		Dog dog1 = new Dog();
+		// create an object of Dog class
 
-		dog1.printMessage();
+		Dog d1 = new Dog();
+
+		d1.makeSound();
+
+		d1.eat();
 
 		}
 }

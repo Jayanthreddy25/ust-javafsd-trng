@@ -1,19 +1,41 @@
-package com.ust;
+package com_2;
 
 public class Test {
-static int x=1;
-private int y=3;
-public void method1(int x) {
-	Test t=new Test();
-	this.x=2;
-	y=4;
-	System.out.println("Test.x:"+Test.x);
-	System.out.println("t.y:"+t.y);
-	System.out.println("y:"+y);
-	
-}
-public static void main(String args[]) {
-	Test t= new Test();
-	t.method1(5);
-}
+	int a;
+
+	int b;
+
+	//Default constructor
+
+	Test()
+
+	{
+
+	this(10, 20);
+
+	System.out.println("Inside default constructor \n");
+
+	}
+
+	//Parameterized constructor
+
+	Test(int a, int b)
+
+	{
+
+	this.a = a;
+
+	this.b = b;
+
+	System.out.println("Inside parameterized constructor");
+
+	}
+
+	public static void main(String[] args)
+
+	{
+
+	Test object = new Test();
+
+	}
 }

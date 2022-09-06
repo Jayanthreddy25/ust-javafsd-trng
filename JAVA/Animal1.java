@@ -1,47 +1,31 @@
-package com_1;
+package com_2;
 
 public class Animal1 {
-	public void display(){
+	protected String type="animal";
 
-		System.out.println("I am an animal");
+	}
 
-		}
+	class Dog6 extends Animal1 {
 
-		}
+	public String type="mammal";
 
-		class Dog1 extends Animal {
+	public void printType() {
 
-		// overriding method
+	System.out.println("I am a " + type);
 
-		@Override
+	System.out.println("I am an " + super.type);
 
-		public void display(){
+	}
 
-		System.out.println("I am a dog");
+	}
 
-		}
+	class Main6 {
 
-		public void printMessage(){
+	public static void main(String[] args) {
 
-		// this calls overriding method
+	Dog6 dog1 = new Dog6();
 
-		display();
+	dog1.printType();
 
-		// this calls overridden method
-
-		super.display();
-
-		}
-
-		}
-
-		class Main3 {
-
-		public static void main(String[] args) {
-
-		Dog dog1 = new Dog();
-
-		dog1.printMessage();
-
-		}
+	}
 }
