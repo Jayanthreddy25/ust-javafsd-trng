@@ -1,41 +1,20 @@
-package com_2;
+package com_3;
 
-public class Test {
-	int a;
+public class Test<T> {
+T obj;
+Test(T obj) {this.obj=obj;}
+public T getObject() {return this.obj;}
 
-	int b;
+}
 
-	//Default constructor
-
-	Test()
-
-	{
-
-	this(10, 20);
-
-	System.out.println("Inside default constructor \n");
-
-	}
-
-	//Parameterized constructor
-
-	Test(int a, int b)
-
-	{
-
-	this.a = a;
-
-	this.b = b;
-
-	System.out.println("Inside parameterized constructor");
-
-	}
-
-	public static void main(String[] args)
-
-	{
-
-	Test object = new Test();
-
+class Main1{
+	public static void main(String args[]) {
+		Test<Integer>iObj=new Test<Integer>(15);
+		System.out.println(iObj.getObject());
+		
+		Test<String>sObj=new Test<String>("GeeksforGeeks");
+		System.out.println(sObj.getObject());
+		iObj=sObj;
+		
 	}
 }
