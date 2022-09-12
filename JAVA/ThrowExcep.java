@@ -1,6 +1,7 @@
-package com_1;
+package Exceptions;
 
 public class ThrowExcep {
+
 	static void fun()
 
 	{
