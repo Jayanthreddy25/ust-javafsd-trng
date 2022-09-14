@@ -1,20 +1,51 @@
-package com_3;
+package Thread;
+
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Arraylist_example {
-	public static void main(String[] args){
 
-		ArrayList<String> animals = new ArrayList<>();
+	public static void main(String[] args) {
 
-		// Add elements
+		// Creating an ArrayList
 
-		animals.add("Dog");
+		ArrayList<Integer> numbers = new ArrayList<>();
 
-		animals.add("Cat");
+		numbers.add(1);
 
-		animals.add("Horse");
+		numbers.add(3);
 
-		System.out.println("ArrayList: " + animals);
+		numbers.add(2);
+
+		System.out.println("ArrayList: " + numbers);
+
+		// Creating an instance of Iterator
+
+		Iterator<Integer> iterate = numbers.iterator();
+
+		// Using the next() method
+
+		int number = iterate.next();
+
+		System.out.println("Accessed Element: " + number);
+
+		// Using the remove() method
+
+		iterate.remove();
+
+		System.out.println("Removed Element: " + number);
+
+		System.out.print("Updated ArrayList: ");
+
+		// Using the hasNext() method
+
+		while(iterate.hasNext()) {
+
+		// Using the forEachRemaining() method
+
+		iterate.forEachRemaining((value) -> System.out.print(value + ", "));
+
+		}
 
 		}
 }

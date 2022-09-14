@@ -1,23 +1,22 @@
-package com.ust;
+package Thread;
+
+import java.util.ArrayList;
 
 public class Main {
-	public static void main(String[] args) {
 
-		// for loop
+	public static void main(String[] args){
 
-		for (int i = 1; i <= 10; ++i) {
+		ArrayList<String> animals = new ArrayList<>();
 
-		// if value of i is between 4 and 9
+		// Add elements
 
-		// continue is executed
+		animals.add("Dog");
 
-		if (i > 4 && i < 9) {
+		animals.add("Cat");
 
-		continue;
+		animals.add("Horse");
+
+		System.out.println("ArrayList: " + animals);
 
 		}
-
-		System.out.println(i);
-}
-}
 }
