@@ -1,41 +1,26 @@
-package com_2;
+package Enumerations;
 
-interface A {
-	void funcA();
+import java.util.Collections;
+import java.util.Enumeration;
+import java.util.HashSet;
 
-	}
+public class Demo {
 
-	interface B extends A {
+	public static void main(String[] args) {
 
-	void funcB();
+		HashSet<String> hs = new HashSet<String>();
 
-	}
+		hs.add("P");
 
-	class C implements B {
+		hs.add("Q");
 
-	public void funcA() {
+		hs.add("R");
 
-	System.out.println("This is funcA");
+		Enumeration e = Collections.enumeration(hs);
 
-	}
+		while (e.hasMoreElements())
 
-	public void funcB() {
+		System.out.println(e.nextElement());
 
-	System.out.println("This is funcB");
-
-	}
-
-	}
-
-	public class Demo {
-
-	public static void main(String args[]) {
-
-	C obj = new C();
-
-	obj.funcA();
-
-	obj.funcB();
-
-	}
+		}
 }
