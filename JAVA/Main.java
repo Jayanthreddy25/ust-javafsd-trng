@@ -1,22 +1,28 @@
-package Thread;
+import org.junit.jupiter.api.Test;
+//this is functional interface
 
-import java.util.ArrayList;
+@FunctionalInterface
 
+interface MyInterface{
+
+//abstract method
+
+double getPiValue();
+
+}
 public class Main {
+	public static void main(String args[]) {
+	
 
-	public static void main(String[] args){
+			MyInterface ref;
 
-		ArrayList<String> animals = new ArrayList<>();
+			// lambda expression
 
-		// Add elements
+			ref = () -> 3.1415;
 
-		animals.add("Dog");
-
-		animals.add("Cat");
-
-		animals.add("Horse");
-
-		System.out.println("ArrayList: " + animals);
+			System.out.println("Value of Pi = " + ref.getPiValue());
 
 		}
-}
+	}
+
+
