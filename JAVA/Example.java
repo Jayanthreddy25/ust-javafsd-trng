@@ -1,28 +1,58 @@
-package Enumerations;
+package Testing1;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Enumeration;
+import java.util.List;
+import java.util.stream.Collectors;
+
+class Student{
+
+int id;
+
+String name;
+
+int age;
+
+public Student(int id, String name, int age) {
+
+this.id = id;
+
+this.name = name;
+
+this.age = age;
+
+}
+
+}
 
 public class Example {
 
-	public static void main (String[] args) {
+public static void main(String[] args) {
 
-		ArrayList<Integer> list = new ArrayList<Integer>();
+List<Student> studentlist = new ArrayList<Student>();
 
-		list.add(14);
+//Adding Students
 
-		list.add(2);
+studentlist.add(new Student(11,"Jon",22));
 
-		list.add(73);
+studentlist.add(new Student(22,"Steve",18));
 
-		Enumeration en = Collections.enumeration(list); // getting enumeration over ArrayList list
+studentlist.add(new Student(33,"Lucy",22));
 
-		while(en.hasMoreElements()) {
+studentlist.add(new Student(44,"Sansa",23));
 
-		System.out.println(en.nextElement());
+studentlist.add(new Student(55,"Maggie",18));
 
-		}
+//Fetching student names as List
 
-		}
+List<String> names = studentlist.stream()
+
+.map(n->n.name)
+
+.collect(Collectors.toList());
+
+System.out.println(names);
+
+}
+
+	
 }
